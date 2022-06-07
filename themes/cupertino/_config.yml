@@ -47,6 +47,8 @@ nav:
     # these items will display as a link
     Archives: /archives
     Friends: /friends
+    Tags: /tags
+    Categories: /categories
     Projects: /projects
     About: /about
     # these will be automatically be an icon
