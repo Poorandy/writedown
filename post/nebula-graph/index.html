@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nebula Graph图库预研 - -Andi Land-</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="Andy is talking here.,图数据库相关预研交流为什么要用图数据库图数据库是基于图模型的数据库。相比较于关系型数据库，图数据库是真正注重“关系”的数据库，图数据库在处理关联关系上具有完全的优势。世界上几乎所有领域的事物都有内在,"> 
+    <meta name="author" content="Andy Wu"> 
+    <link rel="alternative" href="atom.xml" title="-Andi Land-" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">-Andi Land-</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://blog.furioso.fun">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Nebula Graph图库预研</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('https://www-cdn.nebula-graph.com.cn/nebula-blog/Online01.png') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/graph"><b>「
+                    </b>GRAPH<b> 」</b></a>
+                
+                January 22, 2022
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/post/nebula-graph/" title="Nebula Graph图库预研" class="">Nebula Graph图库预研</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    11k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    10 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/go/" rel="tag">go</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/graph/" rel="tag">graph</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/nebula-graph/" rel="tag">nebula graph</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="图数据库相关预研交流"><a href="#图数据库相关预研交流" class="headerlink" title="图数据库相关预研交流"></a>图数据库相关预研交流</h1><h2 id="为什么要用图数据库"><a href="#为什么要用图数据库" class="headerlink" title="为什么要用图数据库"></a>为什么要用图数据库</h2><p>图数据库是基于图模型的数据库。相比较于关系型数据库，图数据库是真正注重“关系”的数据库，图数据库在处理关联关系上具有完全的优势。世界上几乎所有领域的事物都有内在联系，像关系型数据库这样的建模系统会将关系和属性单独存储到表和列中，这使得数据管理费时费力，并且难以挖掘和发现深层的数据之间的联系。</p>
+<ul>
+<li><p>图数据库相对于传统关系型数据库的优势：</p>
+<ul>
+<li><p>易建模：图中存储的是带属性的实体和带属性的关系，能够更为直接、自然的表达现实世界。</p>
+</li>
+<li><p>易查询：相比于关系型数据库的复杂关联查询sql，图查询语言，方便描述查询条件，并且图数据库得益于其存储模型和基于存储模型上优化的查询算法，可以高效的处理复杂关联关系查询。</p>
+</li>
+<li><p>易展示：由于建模的简单，基于图数据库的图形化展示也非常友好。</p>
+</li>
+<li><p>易扩展：相对于关系型数据库对新类型的数据和关系需要重新设计模式，图数据库的数据结构清晰简明，可以灵活应对海量的关系变化进行增删改。</p>
+</li>
+</ul>
+</li>
+<li><p>应用场景：</p>
+<ul>
+<li><p>知识图谱：知识图谱对海量信息进行智能化处理，形成大规模的知识库并进而支撑业务应用，为项目中的决策，搜索，智能推荐功能提供支撑。</p>
+</li>
+<li><p>行业领域：图是基于事物关联关系的模型表达，具有天然解释性，因此图数据库与图处理引擎集成的图系统带来的强大的图存储和分析能力，推动了产业数据中信息和知识的挖掘与利用。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="图数据库选型"><a href="#图数据库选型" class="headerlink" title="图数据库选型"></a>图数据库选型</h2><h4 id="为什么放弃-JanusGraph"><a href="#为什么放弃-JanusGraph" class="headerlink" title="为什么放弃 JanusGraph"></a><em>为什么放弃 JanusGraph</em></h4><ul>
+<li>写入效率低，基于ES的索引后端和Hbase的存储后端本身具有局限性</li>
+<li>查询效率低，索引本身基于ES，非图结构</li>
+<li>生态不完善，周边工具少</li>
+<li>中文社区不活跃，文档少</li>
+</ul>
+<h4 id="为什么选择Nebula-Graph"><a href="#为什么选择Nebula-Graph" class="headerlink" title="为什么选择Nebula Graph"></a><em>为什么选择Nebula Graph</em></h4><ul>
+<li><p>索引和存储都基于RocksDB，本身就是高效磁盘KV数据库，能做到和Redis内存数据库差不多的查询性能</p>
+</li>
+<li><p>自带语法类SQL，易于学习，且支持Cypher语法（Neo4j语法）</p>
+<pre><code class="sql">(root@nebula) [test]&gt; (GO 1 TO 15 STEPS FROM 9596900216 OVER label_parent   YIELD dst(edge) AS id |GO 1  STEPS FROM $-.id OVER label YIELD properties($$).ks_name AS NAME,id($$) as id ,labels($$) AS label UNION DISTINCT GO 1 STEPS FROM 9596900216 OVER label YIELD properties($$).ks_name AS NAME,id($$) as id ,labels($$) AS label LIMIT [100]) | GO 1 STEPS FROM $-.id OVER branch, invest, workIn BIDIRECT YIELD properties($$).ks_name AS NAME,id($$) as id ,labels($$) AS label LIMIT [100];
+</code></pre>
+<pre><code class="shell">Got 61 rows (time spent 164274/175179 us)
+</code></pre>
+</li>
+<li><p>面向中国市场，社区活跃，官方文档完善</p>
+</li>
+<li><p>周边生态完善，且开发活跃度高</p>
+</li>
+</ul>
+<h4 id="Nebula-Graph生态"><a href="#Nebula-Graph生态" class="headerlink" title="Nebula Graph生态"></a><em>Nebula Graph生态</em></h4><blockquote>
+<p>Nebula Graph 是一款开源的、分布式的、易扩展的原生图数据库，能够承载数千亿个点和数万亿条边的超大规模数据集，并且提供毫秒级查询。</p>
+</blockquote>
+<p><img src="https://docs.nebula-graph.com.cn/2.6.1/1.introduction/nebula-birdview.png" alt="Nebula Graph 鸟瞰图"></p>
+<h4 id="Nebula-Graph架构"><a href="#Nebula-Graph架构" class="headerlink" title="Nebula Graph架构"></a><em>Nebula Graph架构</em></h4><blockquote>
+<p>Nebula Graph 由三种服务构成：Graph 服务、Meta 服务和 Storage 服务，是一种存储与计算分离的架构。各个节点的Meta 服务和Storage 服务通过<strong>Raft</strong>协议进行</p>
+</blockquote>
+<h5 id="Raft"><a href="#Raft" class="headerlink" title="Raft"></a><em>Raft</em></h5><blockquote>
+<p>分布式系统中，同一份数据通常会有多个副本，这样即使少数副本发生故障，系统仍可正常运行。这就需要一定的技术手段来保证多个副本之间的一致性。</p>
+<p>基本原理：Raft 就是一种用于保证多副本一致性的协议。Raft 采用多个副本之间竞选的方式，赢得”超过半数”副本投票的（候选）副本成为 Leader，由 Leader 代表所有副本对外提供服务；其他 Follower 作为备份。当该 Leader 出现异常后（通信故障、运维命令等），其余 Follower 进行新一轮选举，投票出一个新的 Leader。Leader 和 Follower 之间通过心跳的方式相互探测是否存活，并以 Raft-wal 的方式写入硬盘，超过多个心跳仍无响应的副本会认为发生故障。</p>
+<p>读写流程：对于客户端的每个写入请求，Leader 会将该写入以 Raft-wal 的方式，将该条同步给其他 Follower，并只有在“超过半数”副本都成功收到 Raft-wal 后，才会返回客户端该写入成功。对于客户端的每个读取请求，都直接访问 Leader，而 Follower 并不参与读请求服务。</p>
+</blockquote>
+<p><img src="https://docs-cdn.nebula-graph.com.cn/docs-2.0/1.introduction/2.nebula-graph-architecture/nebula-graph-architecture-1.png" alt="Nebula Graph architecture"></p>
+<h2 id="图构建"><a href="#图构建" class="headerlink" title="图构建"></a>图构建</h2><h4 id="图数据模型"><a href="#图数据模型" class="headerlink" title="图数据模型"></a><em>图数据模型</em></h4><ul>
+<li><p>图空间（Space）</p>
+<p>图空间用于隔离不同团队或者项目的数据。不同图空间的数据是相互隔离的，可以指定不同的存储副本数、权限、分片等。</p>
+</li>
+<li><p>点（Vertex）</p>
+<p>点用来保存实体对象，特点如下：</p>
+<ul>
+<li>点是用点标识符（<code>VID</code>）标识的。<code>VID</code>在同一图空间中唯一。VID 是一个 int64，或者 fixed_string(N)。</li>
+<li>点必须有至少一个 Tag，也可以有多个 Tag。但不能没有 Tag。</li>
+</ul>
+</li>
+<li><p>边（Edge）</p>
+<p>边是用来连接点的，表示两个点之间的关系或行为，特点如下：</p>
+<ul>
+<li>两点之间可以有多条边。</li>
+<li>边是有方向的，不存在无向边。</li>
+<li>四元组 <code>&lt;起点 VID、Edge type、边排序值 (Rank)、终点 VID&gt;</code> 用于唯一标识一条边。边没有 EID。</li>
+<li>一条边有且仅有一个 Edge type。</li>
+<li>一条边有且仅有一个 rank。其为 int64，默认为 0。</li>
+</ul>
+</li>
+<li><p>标签（Tag）</p>
+<p>Tag 由一组事先预定义的属性构成。</p>
+</li>
+<li><p>边类型（Edge type）</p>
+<p>Edge type 由一组事先预定义的属性构成。</p>
+</li>
+<li><p>属性（Properties）</p>
+<p>属性是指以键值对（Key-value pair）形式存储的信息。</p>
+</li>
+</ul>
+<h4 id="图模型设计"><a href="#图模型设计" class="headerlink" title="图模型设计"></a><em>图模型设计</em></h4><img src="/img/hs-graph/image-20211126091300422.png" alt="image-20211126091300422"  />
+
+
+
+<h5 id="如何获取语义层级？"><a href="#如何获取语义层级？" class="headerlink" title="如何获取语义层级？"></a>如何获取语义层级？</h5><p>采用普林斯顿大学WordNet语义词典，将不同实体进行语义层级上的链接，形成hierarchy层级结构的概念-实体网络。</p>
+<h5 id="有什么作用？"><a href="#有什么作用？" class="headerlink" title="有什么作用？"></a>有什么作用？</h5><p>当实体和实体之间具有语义关系的时候，我们可以举个例子:</p>
+<p>当用户需要查询一家生产研究某种药品的机构的时候，用户本身并不知道与该药品相关联的是科研机构（<strong>academyn02</strong>）还是企业（<strong>companyn01</strong>）或者是科研院校（<strong>universityn03</strong>）甚至是医疗机构（<strong>hospitaln02</strong>），那么传统关系型数据库的查询方式是通过药品id去关联四张表获取到的结果进行排序返回。独立建模的图数据库的查询方式是通过药品vid通过一度关系查询终点，并且限制终点的标签</p>
+<p>当加入语义层级之后，我们可以看到该4个实体的上级概念都是<strong>institutionn01</strong>，我们在图数据库中对打上上面4个标签的个体另外打上<strong>institutionn01</strong>的标签，这样通过药品vid直接一度关系查询终点标签为<strong>institutionn01</strong>，就可以得到相同的结果</p>
+<p>这对客户在不清楚目标实体具体是什么，但是大概有个目标概念范围的时候能得到很好的查询体验。</p>
+<p><img src="/img/hs-graph/image-20211126092643482.png" alt="image-20211126092643482"></p>
+<ul>
+<li>Repo  <!-- - http://git.aihuoshi.net/wud/knowledge_graph --></li>
+<li>Language<ul>
+<li>Markdown</li>
+<li>nGQL</li>
+</ul>
+</li>
+<li>Dependences</li>
+</ul>
+<h4 id="图数据流"><a href="#图数据流" class="headerlink" title="图数据流"></a><em>图数据流</em></h4><h5 id="离线数据流"><a href="#离线数据流" class="headerlink" title="离线数据流"></a><em>离线数据流</em></h5><img src="/img/hs-graph/data_flow.png" alt="data_flow" style="zoom:80%;" />
+
+<ul>
+<li>Repo  <!-- - http://git.aihuoshi.net/keystone/graph-builder --></li>
+<li>Language<ul>
+<li>Scala</li>
+</ul>
+</li>
+<li>Dependences<ul>
+<li>Jdk 1.8</li>
+<li>Scala 2.2.0</li>
+<li>nebula-spark-connector</li>
+<li>Maven 3.6.3</li>
+</ul>
+</li>
+</ul>
+<h5 id="实时数据流"><a href="#实时数据流" class="headerlink" title="实时数据流"></a><em>实时数据流</em></h5><blockquote>
+<p>利用nebula-flink-connector库</p>
+</blockquote>
+<h2 id="图服务"><a href="#图服务" class="headerlink" title="图服务"></a>图服务</h2><h4 id="基础服务"><a href="#基础服务" class="headerlink" title="基础服务"></a><em>基础服务</em></h4><p>对nGQL进行封装，提供标准化查询接口，提供标准化写入接口，并提供标准接口文档</p>
+<ul>
+<li>Repo  <!-- - http://git.aihuoshi.net/keystone/graph-server --></li>
+<li>Language<ul>
+<li>Go</li>
+</ul>
+</li>
+<li>Dependences<ul>
+<li>Gin 1.7.4+</li>
+<li>Go 1.6+</li>
+</ul>
+</li>
+<li>Features<ul>
+<li><input disabled="" type="checkbox"> 通用查询<ul>
+<li><input checked="" disabled="" type="checkbox"> go语句 <code>根据指定条件遍历图</code><ul>
+<li><input checked="" disabled="" type="checkbox"> aggregation</li>
+<li><input checked="" disabled="" type="checkbox"> orderby</li>
+<li><input checked="" disabled="" type="checkbox"> n-steps</li>
+<li><input checked="" disabled="" type="checkbox"> sorting</li>
+<li><input checked="" disabled="" type="checkbox"> groupby</li>
+<li><input checked="" disabled="" type="checkbox"> direction</li>
+<li><input checked="" disabled="" type="checkbox"> pagination</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> match语句 <code>模式匹配</code></li>
+<li><input disabled="" type="checkbox"> lookup语句 <code>根据索引遍历图</code></li>
+<li><input disabled="" type="checkbox"> fetch语句 <code>获取点和边的属性</code></li>
+<li><input disabled="" type="checkbox"> unwind语句 <code>拆分列表</code></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 变量和复合查询</li>
+<li><input checked="" disabled="" type="checkbox"> 运算符</li>
+<li><input checked="" disabled="" type="checkbox"> 函数和表达式</li>
+<li><input disabled="" type="checkbox"> 子图和路径</li>
+<li><input checked="" disabled="" type="checkbox"> Graphql<ul>
+<li>支持graphql风格</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="分析模型"><a href="#分析模型" class="headerlink" title="分析模型"></a><em>分析模型</em></h4><p>提供通用的分析模型，标准化出参和入参</p>
+<ul>
+<li>股权穿透</li>
+<li>社区发现</li>
+<li>最短距离</li>
+<li>标签传播</li>
+<li>串标围标</li>
+<li>产业链分析</li>
+<li>…</li>
+</ul>
+<h4 id="算法调度平台-一站式工作台"><a href="#算法调度平台-一站式工作台" class="headerlink" title="算法调度平台(一站式工作台)"></a><em>算法调度平台(一站式工作台)</em></h4><h5 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h5><p><img src="https://p0.meituan.net/travelcube/cb913705f4da670a665bf6f00b66e044359254.png" alt="img"></p>
+<h5 id="与业务系统的结合"><a href="#与业务系统的结合" class="headerlink" title="与业务系统的结合"></a>与业务系统的结合</h5><ul>
+<li>算法工程师发布模型，定义出入参和算法服务路由</li>
+<li>用户注册apiKey</li>
+<li>用户带apiKey和对应的参数RPC&#x2F;HTTP调用算法服务</li>
+<li>算法服务返回结果</li>
+</ul>
+<p><img src="https://p0.meituan.net/travelcube/fb9cbe21519c1c291ef74e568ba526f3165491.png" alt="图2 机器学习在线服务示意图"></p>
+<h4 id="搜索场景"><a href="#搜索场景" class="headerlink" title="搜索场景"></a><em>搜索场景</em></h4><p>Elasticsearch &#x2F; Solr做搜索是目前工业上比较成熟的技术方案，通过Lucene的倒排索引数据结构能够低时耗、高准确返回搜索结果。但是传统的搜索场景局限于<strong>关键字检索</strong>，对于海量数据实体之间的关系和搜索query的意图识别力不从心，缺乏“人性化“。</p>
+<p>在图数据库以及图计算近几年的崛起之下，基于知识图谱的搜索引擎以及成为主流，比如Google就是把搜索核心从倒排索引转向知识图谱。</p>
+<p>在这个背景下，对query的意图识别成为搜索引擎的核心关键技术，加也是NLP在工业上应用的重点领域。</p>
+<p>因此，构建产业大数据知识图谱并且支撑搜索、推荐业务，是可以预见的，明确的发展目标。从而给公司的产品提供更多的可能性。</p>
+<p>搜索、推荐业务有几个特点</p>
+<ul>
+<li><p>高适用</p>
+<blockquote>
+<p>基本所有项目和产品都具有搜索的场景，火石的产业搜索引擎没有技术到落地的业务需求沟壑</p>
+</blockquote>
+</li>
+<li><p>高频率</p>
+<blockquote>
+<p>搜索场景是用户高频使用的功能模块</p>
+</blockquote>
+</li>
+<li><p>高反馈</p>
+<blockquote>
+<p>用户对搜索的结果具有较高、较清晰的体验反馈</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="基本架构"><a href="#基本架构" class="headerlink" title="基本架构"></a><em>基本架构</em></h5><img src="/img/hs-graph/image-20211126095126214.png" alt="image-20211126095126214" style="zoom:70%;" />
+
+
+<h2 id="图工具扩展"><a href="#图工具扩展" class="headerlink" title="图工具扩展"></a>图工具扩展</h2><h4 id="图分析平台"><a href="#图分析平台" class="headerlink" title="图分析平台"></a><em>图分析平台</em></h4><ul>
+<li><p>项目管理</p>
+</li>
+<li><p>数据源管理</p>
+</li>
+<li><p>可视化算子</p>
+<ul>
+<li>filter</li>
+<li>steps</li>
+<li>match</li>
+<li>scan</li>
+<li>yield</li>
+</ul>
+</li>
+<li><p>模型管理</p>
+</li>
+<li><p>模型发布</p>
+</li>
+<li><p>控制台（带权限）</p>
+</li>
+</ul>
+<h4 id="图数据库管理工具"><a href="#图数据库管理工具" class="headerlink" title="图数据库管理工具"></a><em>图数据库管理工具</em></h4><ul>
+<li><p>Nebula Writer (datax plugin？)</p>
+</li>
+<li><p>图库运行监控</p>
+</li>
+<li><p>元数据管理</p>
+<ul>
+<li>space</li>
+<li>schema</li>
+<li>stats</li>
+</ul>
+</li>
+<li><p>ETL流程任务管理</p>
+<ul>
+<li>spark任务集群</li>
+</ul>
+</li>
+<li><p>图空间数据切割（SaaS -&gt; 项目）</p>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='579c85af6c369e5bedbd'
+        data-cs='8307adc26e2633d10509deed59ec3c793ff088a0'
+        data-r='gitalk-comments'
+        data-o='Poorandy'
+        data-a='Poorandy'
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="/img/favicon.png" height=300 width=300></img>
+                    <p>Andy Wu</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/Poorandy" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">5 <p>Articles</p></a></li>
+                    <li><a href="/categories">5 <p>Categories</p></a></li>
+                    <li><a href="/tags">8 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E9%A2%84%E7%A0%94%E4%BA%A4%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">图数据库相关预研交流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">为什么要用图数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">图数据库选型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E6%9E%84%E5%BB%BA"><span class="toc-number">1.3.</span> <span class="toc-text">图构建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.4.</span> <span class="toc-text">图服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B7%A5%E5%85%B7%E6%89%A9%E5%B1%95"><span class="toc-number">1.5.</span> <span class="toc-text">图工具扩展</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2022
+        <span class="gradient-text">
+            Andy Wu
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.3" target="_blank" rel="noopener">v1.4.9.3</a></small>
+        
+        </br>
+        浙ICP备
+        <span class="gradient-text">
+            <a href="https://beian.miit.gov.cn/" title="2021013953号-1" target="_blank" rel="noopener">2021013953号-1</a>
+        </span>
+        
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
