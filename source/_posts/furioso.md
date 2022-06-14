@@ -25,9 +25,33 @@ https://godotengine.org/
 - open-source
 
 # Game Design
+## Art Design
+## System Design
 - [ ] character
     - [ ] armor
-        - [ ] main hand
-        - [ ] off hand
-    - [ ] skill
-    - [ ] aura
+        - [ ] weapon *two hands limit*
+            - [ ] main-hand
+            - [ ] off-hand
+        - [ ] helmet
+        - [ ] waist
+        - [ ] belt
+        - [ ] gloves
+        - [ ] legs
+        - [ ] cloth
+        - [ ] boots
+        - [ ] necklace
+        - [ ] rings
+    - [ ] class
+        - [ ] warrior
+        - [ ] mage
+        - [ ] rogue
+        - [ ] druid
+        - [ ] paladin
+        - [ ] hunter
+- [ ] skill
+- [ ] aura
+- [ ] dungeon
+- [ ] landscape
+    - [ ] dock
+    - [ ] castle
+## Simulation
