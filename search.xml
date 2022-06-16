@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>godot writedown</title>
+      <link href="//post/godot/"/>
+      <url>//post/godot/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Node-Type"><a href="#Node-Type" class="headerlink" title="Node Type"></a>Node Type</h1><h2 id="Sprite-精灵节点"><a href="#Sprite-精灵节点" class="headerlink" title="Sprite 精灵节点"></a>Sprite <code>精灵节点</code></h2><h3 id="attributes"><a href="#attributes" class="headerlink" title="attributes"></a>attributes</h3><pre><code>- position- rotation- visible</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game </category>
+          
+          <category> Program </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Godot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>furioso</title>
       <link href="//post/furioso/"/>
       <url>//post/furioso/</url>
